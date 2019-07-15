@@ -1,4 +1,5 @@
 import React from 'react';
+import searchimages from './searchimages'; 
 
 class Characters extends React.Component {
 
@@ -16,7 +17,7 @@ class Characters extends React.Component {
         const json = await res.json()
         console.log(json)
         this.setState({ characters: json, loading:false})
-
+        searchimages("Puppy")
     }
     renderCharacters (){
         console.log(this.state)
