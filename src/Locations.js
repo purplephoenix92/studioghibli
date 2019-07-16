@@ -1,5 +1,5 @@
 import React from 'react';
-
+import axios from 'axios'; 
 
 class Locations extends React.Component {
 
@@ -20,7 +20,19 @@ class Locations extends React.Component {
 
     }
 
+    searchimages() {
 
+      axios.get('http://jsonplaceholder.typicode.com/todos',
+      {
+          params: {
+
+              q: {},
+          api_key: 'u01v1irwWhLtMyWRzhckeXuA0mPrIPfK'
+          }
+
+      })
+
+    }
 
     renderLocations() {
         console.log(this.state)
