@@ -4,12 +4,31 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
     return (
-        <div> <Link to="/">Home</Link>
-            <Link to="/Locations">Locations</Link>
-            <Link to="/Characters">Characters</Link>
-            <Link to="/Films">Films</Link>
-        </div>
-    )
-}
 
-export default Navbar 
+
+        <nav className="navbar navbar-inverse">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            {/* <NavBrand linkTo={this.props.brand.linkTo} text={this.props.brand.text} /> */}
+          </div>
+          <div className="collapse navbar-collapse" id="navbar-collapse">
+
+         <ul className= "nav navbar-nav"> <Link to="/" className="active">Home</Link>
+            <li><Link to="/Locations">Locations</Link></li>
+            <li><Link to="/Characters">Characters</Link></li>
+            <li><Link to="/Films">Films</Link></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+       
+            )
+        }
+        
+        export default Navbar 
