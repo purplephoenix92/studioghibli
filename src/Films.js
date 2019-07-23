@@ -30,9 +30,9 @@ class Films extends Component {
   renderFilms() {
     console.log(this.state)
     if (this.state.loading) return <div>Loading</div>
-    return this.state.films.map(film => {
+    return this.state.films.map((film, index) => {
       return (
-        <p>{film.title}</p>
+        <p key={'film-' + index}>{film.title}</p>
       )
     })
   }

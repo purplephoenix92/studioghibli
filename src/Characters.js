@@ -22,9 +22,9 @@ class Characters extends React.Component {
     renderCharacters (){
         console.log(this.state)
         if (this.state.loading) return <div>Loading</div>
-        return this.state.characters.map(character => {
+        return this.state.characters.map((Characters, index) => {
             return(
-                <p>{character.name}</p>
+                <p key={'Characters-' + index} >{Characters.name}</p>
             )
         })
 

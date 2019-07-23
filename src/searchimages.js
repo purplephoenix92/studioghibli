@@ -14,5 +14,6 @@ const searchimages = () => {
         
 
 };
-
+// This is the .js file that I plan to build upon at a later point, with the goal being for the user to have a search
+// bar to look up any character, location, or film, and then to have a GIF generate. 
 export default searchimages 

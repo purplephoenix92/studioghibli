@@ -38,9 +38,9 @@ class Locations extends React.Component {
     renderLocations() {
         console.log(this.state)
         if (this.state.loading) return <div>Loading</div>
-        return this.state.locations.map(Location => {
+        return this.state.locations.map((Location, index) => {
           return (
-            <p>{Location.name}</p>
+            <p key={'location-' + index}>{Location.name}</p>
           )
         })
       }
