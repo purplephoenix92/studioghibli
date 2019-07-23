@@ -1,5 +1,4 @@
 import React from 'react';
-import searchimages from './searchimages'; 
 
 class Characters extends React.Component {
 
@@ -17,7 +16,6 @@ class Characters extends React.Component {
         const json = await res.json()
         console.log(json)
         this.setState({ characters: json, loading:false})
-        searchimages("Puppy")
     }
     renderCharacters (){
         console.log(this.state)
@@ -27,7 +25,8 @@ class Characters extends React.Component {
                 <p key={'Characters-' + index} >{Characters.name}</p>
             )
         })
-
+// As listed above it is better to have props to have their own unique key, so that is why the key is referencing the particular page, and whereever it happens to be in the index
+// This above endpoint was pulled from the API to give a complete list of characters. 
     }
     render() {
         return (
