@@ -7,7 +7,10 @@ import Characters from './Characters';
 import Home from './Home';
 import Navbar from './Navbar'; 
 
-
+// Since this is using the react framework, I imported react from 'react', imported from react-router-dom
+// and I made sure that I linked in the pages that contain my 3 endpoints that make up my website. 
+// Below is my route path and exact path to make sure that when the links were clicked, they would go to the 
+// correct location in the site. 
 function App() {
   return (
     < HashRouter >

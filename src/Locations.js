@@ -19,7 +19,8 @@ class Locations extends React.Component {
         this.setState({locations: json, loading: false})
 
     }
-
+// Above is the location endpoint. As opposed to using the endpoint that would have a '?' that would 
+// only be searching for certain items. I wanted to pull from the entire available list for locations
     searchimages() {
 
       axios.get('http://jsonplaceholder.typicode.com/todos',
